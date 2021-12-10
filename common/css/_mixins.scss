@@ -1,0 +1,76 @@
+@mixin btn-bg ($bg, $color){
+    background-color: $bg;
+    color: $color;
+}
+@mixin btn-bg-white ($bg, $color){
+    background-color: $bg;
+    color: $color;
+}
+@mixin style-btn{
+    border-radius: 30px;
+    padding: 15px 50px 15px 30px;
+    position: relative;
+    font-size: 16px;
+    @include maxWidth(968px){
+        border-radius: 3rem;
+        padding: 1.5rem 5rem 1.5rem 3rem;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    
+}
+@mixin after-btn {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    @include maxWidth(968px){
+        margin-left: 1.5rem;
+    }
+}
+@mixin btn-with-arrow{
+    @include style-btn;
+    margin-top: 50px;
+    &:after{
+        content: '\f30b';
+        @include after-btn;
+    }
+    @include maxWidth(968px){
+        margin-top: 5rem;
+    }
+}
+@mixin btn-transparent{
+    @include style-btn;
+    margin-top: 25px;
+    border: 1px solid $primary-color;
+    &:after{
+        content: '\f30b';
+        @include after-btn;
+    }
+    @include maxWidth(968px){
+        margin-top: 2.5rem;
+    }
+}
+@mixin btn-external {
+    @include style-btn;
+    &:after{
+        content: '\f35d';
+        @include after-btn;
+        top: 50%;
+    }
+}
+
+@mixin textRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+@mixin minWidth($breakpoint) {
+    @media only screen and (min-width: $breakpoint) { @content; }
+  }
+@mixin maxWidth($breakpoint) {
+    @media only screen and (max-width: $breakpoint) { @content; }
+}

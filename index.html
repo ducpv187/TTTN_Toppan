@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./common/css/normalize.min.css" />
+    <link rel="stylesheet" href="./common/css/base.css" />
+    <link rel="stylesheet" href="./common/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./common/fonts/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./common/css/bootstrap.min.css" />
+    <title>Trainning FE</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"
+            ><img
+              src="./common/image/logo.png"
+              alt="TOPPAN - Packaging Solutions"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse header-left"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  data-bs-toggle="modal"
+                  data-bs-target="#searchProduct"
+                  >Search for Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sustainability</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Total Solutions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News Release</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Offices & Bases</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-right">
+            <button class="btn btn-bg">Contact Us</button>
+            <button class="btn btn-bg-white">日本語</button>
+          </div>
+        </div>
+      </nav>
+      <div class="popupSearch">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="searchProduct"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">
+                  Search for Products
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div id="boxSearch">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-md-8 col-lg-8 offset-md-2">
+                        <div class="boxSearch__content">
+                          <p>フリーワード検索</p>
+                          <form
+                            method="get"
+                            class="searchform"
+                            action=""
+                            role="search"
+                          >
+                            <input
+                              type="search"
+                              class="search-field mb-0"
+                              name="s"
+                              value=""
+                              id="s"
+                              placeholder="紙パッケージ　高級感"
+                            />
+                            <button type="submit" aria-label="Submit"></button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section id="ourProduct">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-md-12 col-lg-12">
+                        <div class="tab" id="mainTab__search">
+                          <button
+                            class="tablinks tablinks__search active"
+                            onclick="myTabs__search(event, 'ProductType__search')"
+                          >
+                            By product type
+                          </button>
+                          <button
+                            class="tablinks tablinks__search"
+                            onclick="myTabs__search(event, 'Industry__search')"
+                          >
+                            By industry
+                          </button>
+                          <button
+                            class="tablinks tablinks__search"
+                            onclick="myTabs__search(event, 'Purpose__search')"
+                          >
+                            By purpose
+                          </button>
+                        </div>
+
+                        <div
+                          id="ProductType__search"
+                          class="tabcontent tabcontent__search"
+                          style="display: block"
+                        >
+                          <div class="row">
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/packaging.png"
+                                    alt="Flexible Packaging"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Flexible Packaging</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/film.png"
+                                    alt="Barrier Film"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Barrier Film</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/cartons.png"
+                                    alt="Folding Cartons"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Folding Cartons</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/liquid.png"
+                                    alt="Composite Containers for Liquids"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Composite Containers for Liquids</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/product.png"
+                                    alt="Plastic Products"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Plastic Products</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/board.png"
+                                    alt="Corrugated Board"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Corrugated Board</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/energy.png"
+                                    alt="Performance Materials and Energy"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Performance Materials and Energy</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/filling.png"
+                                    alt="BPO/Filling"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>BPO/Filling</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/transformation.png"
+                                    alt="Digital transformation"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Digital transformation</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3">
+                              <div class="icon-box">
+                                <div class="icon-box-img">
+                                  <img
+                                    src="./common/image/others.png"
+                                    alt="Others"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <div class="icon-box-text">
+                                  <p>Others</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          id="Industry__search"
+                          class="tabcontent tabcontent__search"
+                        >
+                          <div class="content-col3">
+                            <div class="row">
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/mediacal.png"
+                                      alt="Medical and Pharmaceutical Goods"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Medical and Pharmaceutical Goods</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/foods.png"
+                                      alt="Foods & Confectionery"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Foods & Confectionery</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/toiletries.png"
+                                      alt="Toiletries"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Toiletries</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/beverages.png"
+                                      alt="Beverages"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Beverages</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/industrial.png"
+                                      alt="Industrial Materials"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Industrial Materials</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          id="Purpose__search"
+                          class="tabcontent tabcontent__search"
+                        >
+                          <div class="content-col3">
+                            <div class="row">
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/user-friendly.png"
+                                      alt="User-Friendly Design"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>User-Friendly Design</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/providing.png"
+                                      alt="Providing Information & Designs"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Providing Information & Designs</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/enhancing.png"
+                                      alt="Enhancing ease of distribution"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Enhancing ease of distribution</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/earth-frendly.png"
+                                      alt="Earth-Friendly Materials"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Earth-Friendly Materials</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4 col-md-4 col-lg-4">
+                                <div class="icon-box">
+                                  <div class="icon-box-img">
+                                    <img
+                                      src="./common/image/digitalizing.png"
+                                      alt="Digitalizing processes"
+                                      class="img-fluid"
+                                    />
+                                  </div>
+                                  <div class="icon-box-text">
+                                    <p>Digitalizing processes</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <section id="slider">
+        <div class="container">
+          <div class="mySlides">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <img
+                  src="./common/image/img_mv1.jpg"
+                  style="width: 100%"
+                  alt="cutting-edge technology"
+                />
+                <div class="mySlides__process">
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(1)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(2)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(3)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(4)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="mySlides-text px-5">
+                  <h1>
+                    We design the fulfilling lifestyle of the future through our
+                    packages.
+                  </h1>
+                  <p>
+                    Safe, secure manufacturing at plants equipped with
+                    cutting-edge technology
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <img
+                  src="./common/image/img_mv2_A.jpg"
+                  style="width: 100%"
+                  alt="GL BARRIER"
+                />
+                <div class="mySlides__process">
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(1)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(2)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(3)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(4)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="mySlides-text px-5">
+                  <h1>
+                    We design the fulfilling lifestyle of the future through our
+                    packages.
+                  </h1>
+                  <p>
+                    Market-leading transparent barrier film that achieves both
+                    outstanding barrier performance and eco-friendliness
+                  </p>
+
+                  <button class="btn btn-bg-white">GL BARRIER</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <img
+                  src="./common/image/img_mv3.png"
+                  style="width: 100%"
+                  alt="Total Solutions"
+                />
+                <div class="mySlides__process">
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(1)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(2)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(3)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(4)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="mySlides-text px-5">
+                  <h1>
+                    We design the fulfilling lifestyle of the future through our
+                    packages.
+                  </h1>
+                  <p>
+                    Supporting diverse solutions for our customers’ products
+                  </p>
+                  <button class="btn btn-bg-white">Total Solutions</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <img
+                  src="./common/image/img_mv4.png"
+                  style="width: 100%"
+                  alt="Sustainability"
+                />
+                <div class="mySlides__process">
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(1)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(2)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(3)"
+                    ></div>
+                  </div>
+                  <div class="thumb thumb-process">
+                    <div
+                      class="demo cursor"
+                      style="width: 100%"
+                      onclick="currentSlide(4)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="mySlides-text px-5">
+                  <h1>
+                    We design the fulfilling lifestyle of the future through our
+                    packages.
+                  </h1>
+                  <p>Our efforts to shape a sustainable society</p>
+                  <button class="btn btn-bg-white">Sustainability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row slider-thumnail-main">
+            <div class="col-12 col-md-5 col-lg-5 offset-md-7">
+              <div class="slider-thumnail px-5">
+                <div class="thumb thumb-main">
+                  <img
+                    class="demo cursor"
+                    src="./common/image/thumb1.jpg"
+                    style="width: 100%"
+                    onclick="currentSlide(1)"
+                    alt="cutting-edge technology"
+                  />
+                </div>
+                <div class="thumb thumb-main">
+                  <img
+                    class="demo cursor"
+                    src="./common/image/thumb2.jpg"
+                    style="width: 100%"
+                    onclick="currentSlide(2)"
+                    alt="GL BARRIER"
+                  />
+                </div>
+                <div class="thumb thumb-main">
+                  <img
+                    class="demo cursor"
+                    src="./common/image/thumb3.jpg"
+                    style="width: 100%"
+                    onclick="currentSlide(3)"
+                    alt="Total Solutions"
+                  />
+                </div>
+                <div class="thumb thumb-main">
+                  <img
+                    class="demo cursor"
+                    src="./common/image/thumb4.jpg"
+                    style="width: 100%"
+                    onclick="currentSlide(4)"
+                    alt="Sustainability"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ourProduct">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <h1 class="text-center">Our Products</h1>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="tab" id="mainTab">
+                <button
+                  class="tablinks tablinks__product tablinks active"
+                  onclick="myTabs(event, 'ProductType')"
+                >
+                  By product type
+                </button>
+                <button
+                  class="tablinks tablinks__product"
+                  onclick="myTabs(event, 'Industry')"
+                >
+                  By industry
+                </button>
+                <button
+                  class="tablinks tablinks__product"
+                  onclick="myTabs(event, 'Purpose')"
+                >
+                  By purpose
+                </button>
+              </div>
+
+              <div
+                id="ProductType"
+                class="tabcontent tabcontent__product"
+                style="display: block"
+              >
+                <div class="row">
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/packaging.png"
+                          alt="Flexible Packaging"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Flexible Packaging</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/film.png"
+                          alt="Barrier Film"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Barrier Film</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/cartons.png"
+                          alt="Folding Cartons"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Folding Cartons</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/liquid.png"
+                          alt="Composite Containers for Liquids"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Composite Containers for Liquids</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/product.png"
+                          alt="Plastic Products"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Plastic Products</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/board.png"
+                          alt="Corrugated Board"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Corrugated Board</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/energy.png"
+                          alt="Performance Materials and Energy"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Performance Materials and Energy</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/filling.png"
+                          alt="BPO/Filling"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>BPO/Filling</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/transformation.png"
+                          alt="Digital transformation"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Digital transformation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-4 col-lg-3">
+                    <div class="icon-box">
+                      <div class="icon-box-img">
+                        <img
+                          src="./common/image/others.png"
+                          alt="Others"
+                          class="img-fluid"
+                        />
+                      </div>
+                      <div class="icon-box-text">
+                        <p>Others</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="Industry" class="tabcontent tabcontent__product">
+                <div class="content-col3">
+                  <div class="row">
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/mediacal.png"
+                            alt="Medical and Pharmaceutical Goods"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Medical and Pharmaceutical Goods</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/foods.png"
+                            alt="Foods & Confectionery"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Foods & Confectionery</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/toiletries.png"
+                            alt="Toiletries"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Toiletries</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/beverages.png"
+                            alt="Beverages"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Beverages</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/industrial.png"
+                            alt="Industrial Materials"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Industrial Materials</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="Purpose" class="tabcontent tabcontent__product">
+                <div class="content-col3">
+                  <div class="row">
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/user-friendly.png"
+                            alt="User-Friendly Design"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>User-Friendly Design</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/providing.png"
+                            alt="Providing Information & Designs"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Providing Information & Designs</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/enhancing.png"
+                            alt="Enhancing ease of distribution"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Enhancing ease of distribution</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/earth-frendly.png"
+                            alt="Earth-Friendly Materials"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Earth-Friendly Materials</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="icon-box">
+                        <div class="icon-box-img">
+                          <img
+                            src="./common/image/digitalizing.png"
+                            alt="Digitalizing processes"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="icon-box-text">
+                          <p>Digitalizing processes</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="solutions">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 order-2 order-lg-1">
+              <h1>TOPPAN<br />Total Packaging<br />Solutions</h1>
+              <p>
+                We provide optimal solutions matched to various settings related
+                to our customers’ products, including product planning,
+                development, and promotion.
+              </p>
+              <button class="btn btn-bg-white">Total Solutions</button>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 order-1 order-lg-2">
+              <div class="img">
+                <img
+                  src="./common/image/solution_mob.png"
+                  alt="image solutions"
+                  style="display: none"
+                />
+                <img src="./common/image/solutions.png" alt="image solutions" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="coreValue">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="img">
+                <img
+                  src="./common/image/img_core_value.png"
+                  alt="Core value"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <h1>TOPPAN<br />Packaging<br />Core Value</h1>
+              <p>
+                To help achieve a sustainable society, we are creating value
+                that considers the future of people, society, and the planet.
+              </p>
+              <button class="btn btn-bg-white">
+                Toppan’s Sustainability Initiatives
+              </button>
+              <button class="btn btn-transparent">
+                <span>Value for people</span><span>SMART LIFE VALUE</span>
+              </button>
+              <button class="btn btn-transparent">
+                <span>Value for society</span><span>SOCIAL VALUE</span>
+              </button>
+              <button class="btn btn-transparent">
+                <span>Value for the Earth</span><span>SUSTAINABLE VALUE</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="title">
+                <h1 class="text-center">News Release</h1>
+                <button class="btn btn-bg-white">News Release</button>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+              <a href="#!">
+                <div class="metaBox">
+                  <div class="meta" style="display: none">
+                    <div class="category">
+                      <h4>News release</h4>
+                    </div>
+                    <div class="time">
+                      <h5>Nov 2, 2020</h5>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="image-box">
+                      <img
+                        src="./common/image/news1.png"
+                        alt="news release"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <div class="meta">
+                        <div class="category">
+                          <h4>News release</h4>
+                        </div>
+                        <div class="time">
+                          <h5>Nov 2, 2020</h5>
+                        </div>
+                      </div>
+                      <div class="blog-title">
+                        <h3>
+                          Toppan Launches Full-Scale Sales of PE and BOPP High
+                          Barrier Films for Mono-Material Packaging
+                        </h3>
+                      </div>
+                      <div class="blog-content">
+                        <p>
+                          World-class transparent barrier films with PE and BOPP
+                          substrates to go on sale starting with U.S. and
+                          European markets from November.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+              <a href="#!">
+                <div class="metaBox">
+                  <div class="meta" style="display: none">
+                    <div class="category">
+                      <h4>News release</h4>
+                    </div>
+                    <div class="time">
+                      <h5>Nov 2, 2020</h5>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="image-box">
+                      <img
+                        src="./common/image/newsrelease2.png"
+                        alt="news release"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <div class="meta">
+                        <div class="category">
+                          <h4>News release</h4>
+                        </div>
+                        <div class="time">
+                          <h5>Nov 2, 2020</h5>
+                        </div>
+                      </div>
+                      <div class="blog-title">
+                        <h3>
+                          Toppan Develops New Packaging for Frozen Storage of
+                          Food
+                        </h3>
+                      </div>
+                      <div class="blog-content">
+                        <p>
+                          New packaging helps to address issues of food safety
+                          and food loss by reducing discoloration, loss of
+                          flavor, and quality deterioration during frozen
+                          distribution and storage.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+              <a href="#!">
+                <div class="metaBox">
+                  <div class="meta" style="display: none">
+                    <div class="category">
+                      <h4>News release</h4>
+                    </div>
+                    <div class="time">
+                      <h5>Jul 27, 2020</h5>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="image-box">
+                      <img
+                        src="./common/image/news3.png"
+                        alt="news release"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <div class="meta">
+                        <div class="category">
+                          <h4>News release</h4>
+                        </div>
+                        <div class="time">
+                          <h5>Jul 27, 2020</h5>
+                        </div>
+                      </div>
+                      <div class="blog-title">
+                        <h3>Siam Toppan Wins WorldStar Packaging Awards</h3>
+                      </div>
+                      <div class="blog-content">
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="location">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+              <div class="text-right">
+                <h1 style="color: #fff">Locations</h1>
+                <p>
+                  Both within Japan and abroad, we utilize our package
+                  production and sales network to provide solutions aimed at
+                  helping our customers with global procurement and production
+                  in the optimal location.
+                </p>
+                <button class="btn btn-bg-white">Locations</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Co-Creation">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+              <div class="img">
+                <h1 style="display: none">Co-Creation Space “ L･IF･E ”</h1>
+                <img
+                  src="./common/image/co-creation.png"
+                  alt="Co-Creation Space"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+              <div class="text-right">
+                <h1>Co-Creation Space “ L･IF･E ”</h1>
+                <p>
+                  This is a co-creation space showcasing Toppan’s packaging,
+                  décor materials, and wide-ranging other solutions. <br />We
+                  shape and create the future of “life” together with customers
+                  based on ideas beginning with “if.”
+                </p>
+                <button class="btn btn-external">L･IF･E website</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div
+              class="
+                col-12 col-sm-12 col-md-5 col-lg-5
+                offset-lg-2 offset-md-2 offset-sm-0
+              "
+            >
+              <div class="contact-left">
+                <p>
+                  Toppan provides a wide range of solutions for packaging. Let
+                  us know what you need.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+              <div class="contact-right">
+                <button class="btn btn-transparent">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="relatedBusiness">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-10 offset-lg-1 offset-md-0">
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                  <h3>Related business</h3>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <a href="#!">
+                    <img src="./common/image/top_bnr1.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <a href="#!">
+                    <img src="./common/image/top_bnr2.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <a href="#!">
+                    <img src="./common/image/top_bnr3.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <a href="#!">
+                    <img src="./common/image/top_bnr4.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <a href="#!">
+                    <img src="./common/image/top_bnr5.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="affiCompanies">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-10 offset-lg-1 offset-md-0">
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                  <h3>Affiliated Companies</h3>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>Toppan Plastic Co., Ltd.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>Toppan Packaging Service Co., Ltd.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>Toppan Prosprint Co., Ltd.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>Toppan Cosmo, Inc.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>T&T Enertechno Co., Ltd.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3">
+                  <div class="box">
+                    <div class="box-text">
+                      <p>Toppan Infomedia Co., Ltd.</p>
+                    </div>
+                    <div class="box-icon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="footer">
+              <div class="footer-left">
+                <p>
+                  Copyright (c) 2020 TOPPAN PRINTING CO., LTD.<br />凸版印刷株式会社　生活・産業事業本部による、公式HPです。
+                </p>
+              </div>
+              <div class="footer-right">
+                <ul>
+                  <li><a href="#!">Living & Industry Div.</a></li>
+                  <li><a href="#!">Site Map</a></li>
+                  <li><a href="#!">Site Policy</a></li>
+                  <li><a href="#!">Privacy Policy</a></li>
+                  <li><a href="#!">Privacy Statement</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="go-top"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./common/js/jquery-3.6.0.min.js"></script>
+    <script src="./common/js/bootstrap.min.js"></script>
+    <script src="./common/js/main.js"></script>
+    <!-- <script src="./common/js/aos.js"></script> -->
+    <!-- <script>
+        AOS.init();
+    </script> -->
+  </body>
+</html>

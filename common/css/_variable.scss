@@ -1,0 +1,29 @@
+@font-face {
+    font-family: NotoSansJP-Bold;
+    src: url(./../fonts/NotoSansJP-Bold.otf);
+}
+@font-face {
+    font-family: NotoSansJP-Regular;
+    src: url(./../fonts/NotoSansJP-Regular.otf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(./../fonts/Roboto-Bold.ttf);
+}
+$primary-color: #0C4947;
+$secondary-color: #02B9A4;
+$color-white: #fff;
+$color_body: #f4f4f4;
+$font-primary-bold: NotoSansJP-Bold;
+$font-primary-regular: NotoSansJP-Regular;
+$font-h1: 36px;
+$lineHeight: 50px;
+$font-text: 18px;
+$heightHeader__mobile: 5rem;
+// $font-h1__mobile: 24px;
+$font-h1__mobile: 2.4rem;
+$font-h1__mob: 3.6rem;
+// $lineHeight__mobile: 31px;
+$lineHeight__mobile: 3.1rem;
+
+
